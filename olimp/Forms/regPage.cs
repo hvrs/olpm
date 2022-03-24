@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace olimp
 {
     public partial class regPage : Form
@@ -30,9 +31,12 @@ namespace olimp
             {
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Пожалуйста введите Email";
+            }            
+            if ()
+            {
+
             }
-
-
+            
         }
     }
 }

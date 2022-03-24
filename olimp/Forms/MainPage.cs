@@ -20,7 +20,8 @@ namespace olimp
 
         private void авторизацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        
+            SignInPage signInPage = new SignInPage();
+            signInPage.Show();
         }
 
         private void регистрацияToolStripMenuItem_Click(object sender, EventArgs e)
