@@ -1,0 +1,11 @@
+G:\ОАП\OLP\olimp\olimp\bin\Debug\olimp.exe.config
+G:\ОАП\OLP\olimp\olimp\bin\Debug\olimp.exe
+G:\ОАП\OLP\olimp\olimp\bin\Debug\olimp.pdb
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.csproj.AssemblyReference.cache
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.MainPage.resources
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.Properties.Resources.resources
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.regPage.resources
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.csproj.GenerateResource.cache
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.csproj.CoreCompileInputs.cache
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.exe
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.pdb
