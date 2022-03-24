@@ -11,28 +11,25 @@ using System.Data.SqlClient;
 
 namespace olimp
 {
-    public partial class regPage : Form
+    public partial class SignInPage : Form
     {
-        public regPage()
+        public SignInPage()
         {
             InitializeComponent();
         }
 
-        private void btn_SignUp_Click(object sender, EventArgs e)
+        private void btn_SignIn_Click(object sender, EventArgs e)
         {
-
-            if (tb_Pasw.Text != tb_PaswRe.Text || tb_Pasw.Text == string.Empty)
+            if (tb_Email.Text == string.Empty)
             {
                 lbl_typeErr.Visible = true;
-                lbl_typeErr.Text = "Пароли не совпадают";
+                lbl_typeErr.Text = "Введите Email";
             }
-           else if (tb_Email.Text == string.Empty)
+            if (tb_Pasw.Text == string.Empty)
             {
                 lbl_typeErr.Visible = true;
-                lbl_typeErr.Text = "Пожалуйста введите Email";
+                lbl_typeErr.Text = "Введите пароль";
             }
-
-
         }
     }
 }

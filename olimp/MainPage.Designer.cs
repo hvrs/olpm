@@ -29,47 +29,13 @@ namespace olimp
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblNameApp = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.наГлавнуюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.регистрацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.авторизацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.наГлавнуюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblNameApp = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.регистрацияToolStripMenuItem,
-            this.авторизацияToolStripMenuItem,
-            this.наГлавнуюToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(767, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // регистрацияToolStripMenuItem
-            // 
-            this.регистрацияToolStripMenuItem.Name = "регистрацияToolStripMenuItem";
-            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.регистрацияToolStripMenuItem.Text = "На главную";
-            this.регистрацияToolStripMenuItem.Click += new System.EventHandler(this.регистрацияToolStripMenuItem_Click);
-            // 
-            // авторизацияToolStripMenuItem
-            // 
-            this.авторизацияToolStripMenuItem.Margin = new System.Windows.Forms.Padding(495, 0, 0, 0);
-            this.авторизацияToolStripMenuItem.Name = "авторизацияToolStripMenuItem";
-            this.авторизацияToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.авторизацияToolStripMenuItem.Text = "Авторизация";
-            this.авторизацияToolStripMenuItem.Click += new System.EventHandler(this.авторизацияToolStripMenuItem_Click);
-            // 
-            // наГлавнуюToolStripMenuItem
-            // 
-            this.наГлавнуюToolStripMenuItem.Name = "наГлавнуюToolStripMenuItem";
-            this.наГлавнуюToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.наГлавнуюToolStripMenuItem.Text = "Регистрация";
-            this.наГлавнуюToolStripMenuItem.Click += new System.EventHandler(this.наГлавнуюToolStripMenuItem_Click);
             // 
             // lblNameApp
             // 
@@ -80,6 +46,38 @@ namespace olimp
             this.lblNameApp.TabIndex = 1;
             this.lblNameApp.Text = "Name Application";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.наГлавнуюToolStripMenuItem,
+            this.регистрацияToolStripMenuItem,
+            this.авторизацияToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(767, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // наГлавнуюToolStripMenuItem
+            // 
+            this.наГлавнуюToolStripMenuItem.Name = "наГлавнуюToolStripMenuItem";
+            this.наГлавнуюToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.наГлавнуюToolStripMenuItem.Text = "На главную";
+            // 
+            // регистрацияToolStripMenuItem
+            // 
+            this.регистрацияToolStripMenuItem.Name = "регистрацияToolStripMenuItem";
+            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.регистрацияToolStripMenuItem.Text = "Регистрация";
+            this.регистрацияToolStripMenuItem.Click += new System.EventHandler(this.регистрацияToolStripMenuItem_Click);
+            // 
+            // авторизацияToolStripMenuItem
+            // 
+            this.авторизацияToolStripMenuItem.Name = "авторизацияToolStripMenuItem";
+            this.авторизацияToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.авторизацияToolStripMenuItem.Text = "Авторизация";
+            this.авторизацияToolStripMenuItem.Click += new System.EventHandler(this.авторизацияToolStripMenuItem_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,7 +85,6 @@ namespace olimp
             this.ClientSize = new System.Drawing.Size(767, 399);
             this.Controls.Add(this.lblNameApp);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainPage";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -98,12 +95,11 @@ namespace olimp
         }
 
         #endregion
-
+        private System.Windows.Forms.Label lblNameApp;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem наГлавнуюToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem регистрацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem авторизацияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem наГлавнуюToolStripMenuItem;
-        private System.Windows.Forms.Label lblNameApp;
     }
 }
 

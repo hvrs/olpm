@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="connectToDatabase.cs" />
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,12 @@
     </Compile>
     <Compile Include="regPage.Designer.cs">
       <DependentUpon>regPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignInPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInPage.Designer.cs">
+      <DependentUpon>SignInPage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
@@ -74,6 +81,9 @@
     </Compile>
     <EmbeddedResource Include="regPage.resx">
       <DependentUpon>regPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInPage.resx">
+      <DependentUpon>SignInPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
