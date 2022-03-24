@@ -63,6 +63,7 @@ namespace olimp
             this.наГлавнуюToolStripMenuItem.Name = "наГлавнуюToolStripMenuItem";
             this.наГлавнуюToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.наГлавнуюToolStripMenuItem.Text = "На главную";
+            this.наГлавнуюToolStripMenuItem.Click += new System.EventHandler(this.наГлавнуюToolStripMenuItem_Click);
             // 
             // регистрацияToolStripMenuItem
             // 

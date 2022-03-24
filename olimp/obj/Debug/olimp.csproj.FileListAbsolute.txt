@@ -9,3 +9,4 @@ G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.csproj.GenerateResource.cache
 G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.csproj.CoreCompileInputs.cache
 G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.exe
 G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.pdb
+G:\ОАП\OLP\olimp\olimp\obj\Debug\olimp.SignInPage.resources

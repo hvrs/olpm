@@ -32,11 +32,25 @@ namespace olimp
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Пожалуйста введите Email";
             }            
-            if ()
+            if (IsEmail(tb_Email.Text) == false)
             {
-
+                lbl_typeErr.Visible = true;
+                lbl_typeErr.Text = "Неверная почта";
             }
             
+        }
+        static bool IsEmail(string s)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(s);
+                return addr.Address == s;
+            }
+            catch
+            {
+
+                return false;
+            }
         }
     }
 }

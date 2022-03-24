@@ -29,5 +29,20 @@ namespace olimp
             regPage regPage = new regPage();
             regPage.Show();
         }
+
+        private void наГлавнуюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int count = 64;
+            string st = string.Empty;
+            int r;
+            char[] simb = "abcdefghijklmnoprstuvwxyzABCDEFGHUJKLMNOPQRSTUVWXYZ0123456789".ToCharArray();
+            for (int i = 0; i < count; i++)
+            {
+                r = random.Next(simb.Length);
+                st += simb[r];
+            }
+            MessageBox.Show(st);
+        }
     }
 }
