@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace olimp
 {
@@ -25,10 +25,48 @@ namespace olimp
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Введите Email";
             }
-            if (tb_Pasw.Text == string.Empty)
+            else if (IsEmail(tb_Email.Text) == false)
+            {
+                lbl_typeErr.Visible = true;
+                lbl_typeErr.Text = "Неверная почта";
+            }
+            else if (tb_Pasw.Text == string.Empty)
             {
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Введите пароль";
+            }
+            else
+            {
+                
+            }
+        }
+
+        public string CreateMD5Hash(string input)
+        {
+
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++)
+            {
+                sb.Append(hashBytes[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
+
+        static bool IsEmail(string s)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(s);
+                return addr.Address == s;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

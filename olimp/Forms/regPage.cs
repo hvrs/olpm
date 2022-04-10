@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 
 namespace olimp
@@ -32,12 +32,27 @@ namespace olimp
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Пожалуйста введите Email";
             }            
-            if (IsEmail(tb_Email.Text) == false)
+           else if (IsEmail(tb_Email.Text) == false)
             {
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Неверная почта";
             }
-            
+           else
+           {
+                string hash = CreateMD5Hash(tb_Pasw.Text);
+                connectToDatabase connectToDatabase = new connectToDatabase();               
+                SignInPage signInPage = new SignInPage();
+                connectToDatabase.checkEmailAdress(tb_Email.Text, out bool checkEmail);
+                if (checkEmail == true)
+                {
+                    connectToDatabase.signUp(tb_Email.Text, hash.ToLower());
+                    signInPage.Show();
+                    this.Close();
+                }
+                else
+                    lbl_typeErr.Visible = true; lbl_typeErr.Text = "Пользователь с данным email уже существует";
+
+           }  
         }
         static bool IsEmail(string s)
         {
@@ -48,9 +63,26 @@ namespace olimp
             }
             catch
             {
-
                 return false;
             }
         }
-    }
+
+
+
+        public string CreateMD5Hash(string input)
+        {
+
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++)
+            {
+                sb.Append(hashBytes[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
+    }  
 }

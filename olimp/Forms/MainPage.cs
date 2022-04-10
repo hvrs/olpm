@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace olimp
 {
@@ -28,6 +27,7 @@ namespace olimp
         {
             regPage regPage = new regPage();
             regPage.Show();
+            this.Hide();
         }
 
         private void наГлавнуюToolStripMenuItem_Click(object sender, EventArgs e)

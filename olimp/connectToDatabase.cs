@@ -1,14 +1,48 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+
 
 namespace olimp
 {
     class connectToDatabase
     {
+        private string connectionString = "Host=localhost;Username=postgres;Password=1234567890;Database=olimp";
+        public void signUp(string email, string password)
+        {            
+            NpgsqlConnection npgSqlConnection = new NpgsqlConnection(connectionString);
+            npgSqlConnection.Open();
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"INSERT INTO users(email, password) VALUES ('{email}', '{password}')", npgSqlConnection);
+            npgSqlCommand.ExecuteNonQuery();
+            npgSqlConnection.Close();
+        }
+        public void signin(string email, out string password)
+        {           
+            password = "";
+            NpgsqlConnection npgSqlConnection = new NpgsqlConnection(connectionString);
+            npgSqlConnection.Open();
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"SELECT password FROM users WHERE email = '{email}';", npgSqlConnection);
+            NpgsqlDataReader npgSqlDataReader = npgSqlCommand.ExecuteReader();
+            if (npgSqlDataReader.HasRows)
+            {
+                foreach (DbDataRecord dbDataRecord in npgSqlDataReader)
+                    password = dbDataRecord["password"].ToString();
+            }
+        }
+        public void checkEmailAdress(string email, out bool checkEmail)
+        {
+            checkEmail = false;
+            NpgsqlConnection npgSqlConnection = new NpgsqlConnection(connectionString);
+            npgSqlConnection.Open();
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"SELECT email FROM users WHERE email = '{email}';", npgSqlConnection);
+            NpgsqlDataReader npgSqlDataReader = npgSqlCommand.ExecuteReader();
+            if (!npgSqlDataReader.HasRows)
+                checkEmail = true;
+        }
 
     }
 }
