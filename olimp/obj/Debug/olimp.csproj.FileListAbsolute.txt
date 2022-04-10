@@ -51,3 +51,4 @@ C:\Users\Professional\Source\Repos\olpm\olimp\bin\Debug\System.Threading.Channel
 C:\Users\Professional\Source\Repos\olpm\olimp\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Professional\Source\Repos\olpm\olimp\bin\Debug\System.ValueTuple.xml
 C:\Users\Professional\Source\Repos\olpm\olimp\obj\Debug\olimp.csproj.CopyComplete
+C:\Users\Professional\Source\Repos\olpm\olimp\obj\Debug\olimp.Forms.accPage.resources

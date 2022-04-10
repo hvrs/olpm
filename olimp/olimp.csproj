@@ -92,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connectToDatabase.cs" />
+    <Compile Include="Forms\accPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\accPage.Designer.cs">
+      <DependentUpon>accPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="Forms\SignInPage.Designer.cs">
       <DependentUpon>SignInPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\accPage.resx">
+      <DependentUpon>accPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>

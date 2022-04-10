@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using olimp.Forms;
 
 namespace olimp
 {
@@ -20,6 +21,8 @@ namespace olimp
 
         private void btn_SignIn_Click(object sender, EventArgs e)
         {
+            string hash = "";
+            string password = "";
             if (tb_Email.Text == string.Empty)
             {
                 lbl_typeErr.Visible = true;
@@ -37,8 +40,23 @@ namespace olimp
             }
             else
             {
-                
+                hash = CreateMD5Hash(tb_Pasw.Text);
+                connectToDatabase connectToDatabase = new connectToDatabase();
+                connectToDatabase.checkEmailAdress(tb_Email.Text, out bool checkEmail);
+                if (!checkEmail)
+                {
+                    connectToDatabase.signin(tb_Email.Text, out password);
+                }  
             }
+            if (password.ToLower() == hash.ToLower())
+            {
+                lbl_typeErr.Text = "123";
+                accPage accPage = new accPage();
+                accPage.email = tb_Email.Text;
+                accPage.Show();
+                this.Hide();
+            }
+
         }
 
         public string CreateMD5Hash(string input)

@@ -29,11 +29,11 @@ namespace olimp
             NpgsqlDataReader npgSqlDataReader = npgSqlCommand.ExecuteReader();
             if (npgSqlDataReader.HasRows)
             {
-                foreach (DbDataRecord dbDataRecord in npgSqlDataReader)
-                    password = dbDataRecord["password"].ToString();
+                foreach (DbDataRecord DataRecord in npgSqlDataReader)
+                    password = DataRecord["password"].ToString();
             }
         }
-        public void checkEmailAdress(string email, out bool checkEmail)
+        public void checkEmailAdress(string email, out bool checkEmail)//Проверка на наличие в базе данных 
         {
             checkEmail = false;
             NpgsqlConnection npgSqlConnection = new NpgsqlConnection(connectionString);
