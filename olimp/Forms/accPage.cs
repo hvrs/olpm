@@ -21,5 +21,12 @@ namespace olimp.Forms
         {
             label1.Text = email;
         }
+
+        private void добавитьПриложениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addAplication addAplication = new addAplication();
+            addAplication.Show();
+            this.Close();
+        }
     }
 }

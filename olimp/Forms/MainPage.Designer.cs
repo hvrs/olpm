@@ -40,7 +40,7 @@ namespace olimp
             // lblNameApp
             // 
             this.lblNameApp.AutoSize = true;
-            this.lblNameApp.Location = new System.Drawing.Point(322, 188);
+            this.lblNameApp.Location = new System.Drawing.Point(331, 187);
             this.lblNameApp.Name = "lblNameApp";
             this.lblNameApp.Size = new System.Drawing.Size(90, 13);
             this.lblNameApp.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace olimp
             this.Controls.Add(this.lblNameApp);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainPage";
-            this.Text = "Form1";
+            this.Text = "Главная";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -50,13 +50,15 @@ namespace olimp
             }
             if (password.ToLower() == hash.ToLower())
             {
-                lbl_typeErr.Text = "123";
                 accPage accPage = new accPage();
                 accPage.email = tb_Email.Text;
                 accPage.Show();
                 this.Hide();
             }
-
+            else
+            {
+                lbl_typeErr.Visible = true; lbl_typeErr.Text = "Неверный пароль";
+            }
         }
 
         public string CreateMD5Hash(string input)

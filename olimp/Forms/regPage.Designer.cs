@@ -130,7 +130,7 @@ namespace olimp
             this.Controls.Add(this.tb_Pasw);
             this.Controls.Add(this.tb_Email);
             this.Name = "regPage";
-            this.Text = "regPage";
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

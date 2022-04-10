@@ -98,6 +98,12 @@
     <Compile Include="Forms\accPage.Designer.cs">
       <DependentUpon>accPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\addAplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addAplication.Designer.cs">
+      <DependentUpon>addAplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\accPage.resx">
       <DependentUpon>accPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\addAplication.resx">
+      <DependentUpon>addAplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
