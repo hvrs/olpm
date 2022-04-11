@@ -16,7 +16,7 @@ namespace olimp
         {
             InitializeComponent();
         }
-
+        public static bool Sign = false;
         private void авторизацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SignInPage signInPage = new SignInPage();
@@ -43,6 +43,16 @@ namespace olimp
                 st += simb[r];
             }
             MessageBox.Show(st);
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+            if (Sign == true)
+            {
+                регистрацияToolStripMenuItem.Visible = false;
+                авторизацияToolStripMenuItem.Visible = false;
+
+            }
         }
     }
 }

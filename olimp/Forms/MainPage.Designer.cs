@@ -34,6 +34,7 @@ namespace olimp
             this.наГлавнуюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.регистрацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.авторизацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@ namespace olimp
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.наГлавнуюToolStripMenuItem,
             this.регистрацияToolStripMenuItem,
-            this.авторизацияToolStripMenuItem});
+            this.авторизацияToolStripMenuItem,
+            this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(767, 24);
@@ -79,6 +81,14 @@ namespace olimp
             this.авторизацияToolStripMenuItem.Text = "Авторизация";
             this.авторизацияToolStripMenuItem.Click += new System.EventHandler(this.авторизацияToolStripMenuItem_Click);
             // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Margin = new System.Windows.Forms.Padding(440, 0, 0, 0);
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Visible = false;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,8 +96,10 @@ namespace olimp
             this.ClientSize = new System.Drawing.Size(767, 399);
             this.Controls.Add(this.lblNameApp);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainPage";
             this.Text = "Главная";
+            this.Load += new System.EventHandler(this.MainPage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -101,6 +113,7 @@ namespace olimp
         private System.Windows.Forms.ToolStripMenuItem наГлавнуюToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem регистрацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem авторизацияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }
 

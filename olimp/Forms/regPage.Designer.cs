@@ -92,7 +92,6 @@ namespace olimp
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Email:";
-            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -103,7 +102,6 @@ namespace olimp
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Пароль:";
-            this.label2.Visible = false;
             // 
             // label3
             // 
@@ -114,7 +112,6 @@ namespace olimp
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Повтор:";
-            this.label3.Visible = false;
             // 
             // regPage
             // 
@@ -129,6 +126,7 @@ namespace olimp
             this.Controls.Add(this.tb_PaswRe);
             this.Controls.Add(this.tb_Pasw);
             this.Controls.Add(this.tb_Email);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "regPage";
             this.Text = "Регистрация";
             this.ResumeLayout(false);

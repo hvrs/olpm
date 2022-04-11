@@ -80,8 +80,9 @@ namespace olimp
             this.Controls.Add(this.btn_SignIn);
             this.Controls.Add(this.tb_Pasw);
             this.Controls.Add(this.tb_Email);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SignInPage";
-            this.Text = "SignInPage";
+            this.Text = "Авторизация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

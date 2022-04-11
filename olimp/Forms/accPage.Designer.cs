@@ -74,7 +74,7 @@ namespace olimp.Forms
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // accPage
@@ -84,6 +84,7 @@ namespace olimp.Forms
             this.ClientSize = new System.Drawing.Size(640, 329);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "accPage";
             this.Text = "Аккаунт";
             this.Load += new System.EventHandler(this.accPage_Load);
