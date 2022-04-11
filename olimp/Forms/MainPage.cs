@@ -17,6 +17,7 @@ namespace olimp
             InitializeComponent();
         }
         public static bool Sign = false;
+        public static string email = "";
         private void авторизацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SignInPage signInPage = new SignInPage();
@@ -47,11 +48,13 @@ namespace olimp
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-            if (Sign == true)
+            if (Sign)
             {
                 регистрацияToolStripMenuItem.Visible = false;
                 авторизацияToolStripMenuItem.Visible = false;
-
+                выходToolStripMenuItem.Visible = true;
+                личныйКабинетToolStripMenuItem.Visible = true;
+                lbl_NameApp.Text = "Количество добавленных приложений: {0}" ;
             }
         }
     }

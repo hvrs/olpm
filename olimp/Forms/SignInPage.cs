@@ -50,6 +50,9 @@ namespace olimp
             }
             if (password.ToLower() == hash.ToLower())
             {
+                MainPage.email = tb_Email.Text;
+                MainPage.Sign = true;
+
                 accPage accPage = new accPage();
                 accPage.email = tb_Email.Text;
                 accPage.Show();

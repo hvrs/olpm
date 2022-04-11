@@ -38,5 +38,12 @@ namespace olimp.Forms
             }
             lbl_ID.Visible = true; lbl_ID.Text = st;
         }
+
+        private void наГлавнуюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+        }
     }
 }

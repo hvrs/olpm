@@ -63,6 +63,7 @@ namespace olimp.Forms
             this.наГлавнуюToolStripMenuItem.Name = "наГлавнуюToolStripMenuItem";
             this.наГлавнуюToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.наГлавнуюToolStripMenuItem.Text = "На главную";
+            this.наГлавнуюToolStripMenuItem.Click += new System.EventHandler(this.наГлавнуюToolStripMenuItem_Click);
             // 
             // добавитьПриложениеToolStripMenuItem
             // 
@@ -86,6 +87,7 @@ namespace olimp.Forms
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "accPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Аккаунт";
             this.Load += new System.EventHandler(this.accPage_Load);
             this.menuStrip1.ResumeLayout(false);

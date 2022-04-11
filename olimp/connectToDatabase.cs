@@ -44,5 +44,19 @@ namespace olimp
             npgSqlConnection.Close();
         }
 
+        public void amountUserApps(string email, out int amountApps)
+        {
+            amountApps = 0;
+            NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"SELECT nameApp FROM app WHERE email = '{email}';", npgsqlConnection);
+            NpgsqlDataReader npgSqlDataReader = npgsqlCommand.ExecuteReader();
+            if (npgSqlDataReader.HasRows)
+                foreach (DbDataRecord dbDataRecord in npgSqlDataReader)
+                    amountApps++;
+                
+
+            
+        }
     }
 }
