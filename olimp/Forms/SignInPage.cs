@@ -21,34 +21,35 @@ namespace olimp
 
         private void btn_SignIn_Click(object sender, EventArgs e)
         {
+            bool isUser = true;
             string hash = "";
             string password = "";
             if (tb_Email.Text == string.Empty)
             {
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Введите Email";
+                return;
             }
             else if (IsEmail(tb_Email.Text) == false)
             {
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Неверная почта";
+                return;
             }
             else if (tb_Pasw.Text == string.Empty)
             {
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Введите пароль";
+                return;
             }
             else
             {
                 hash = CreateMD5Hash(tb_Pasw.Text);
                 connectToDatabase connectToDatabase = new connectToDatabase();
-                connectToDatabase.checkEmailAdress(tb_Email.Text, out bool checkEmail);
-                if (!checkEmail)
-                {
-                    connectToDatabase.signin(tb_Email.Text, out password);
-                }  
+                /*connectToDatabase.checkEmailAdress(tb_Email.Text, out bool checkEmail);*/
+                connectToDatabase.signin(tb_Email.Text, out password, out isUser);
             }
-            if (password.ToLower() == hash.ToLower())
+            if (password.ToLower() == hash.ToLower() && isUser == true)
             {
                 MainPage.email = tb_Email.Text;
                 MainPage.Sign = true;
@@ -60,7 +61,7 @@ namespace olimp
             }
             else
             {
-                lbl_typeErr.Visible = true; lbl_typeErr.Text = "Неверный пароль";
+                lbl_typeErr.Visible = true; lbl_typeErr.Text = "Неверный пароль или логин";
             }
         }
 

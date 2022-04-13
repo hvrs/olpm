@@ -20,9 +20,10 @@ namespace olimp
             npgSqlCommand.ExecuteNonQuery();
             npgSqlConnection.Close();
         }
-        public void signin(string email, out string password)
+        public void signin(string email, out string password, out bool isUser)
         {           
             password = "";
+            isUser = true;
             NpgsqlConnection npgSqlConnection = new NpgsqlConnection(connectionString);
             npgSqlConnection.Open();
             NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"SELECT password FROM users WHERE email = '{email}';", npgSqlConnection);
@@ -30,6 +31,8 @@ namespace olimp
             if (npgSqlDataReader.HasRows)
                 foreach (DbDataRecord DataRecord in npgSqlDataReader)
                     password = DataRecord["password"].ToString();
+            if (npgSqlDataReader.HasRows == false)
+                isUser = false;
             npgSqlConnection.Close();
         }
         public void checkEmailAdress(string email, out bool checkEmail)//Проверка на наличие в базе данных 
