@@ -57,7 +57,7 @@ namespace olimp
                 accPage accPage = new accPage();
                 accPage.email = tb_Email.Text;
                 accPage.Show();
-                this.Hide();
+                this.Close();
             }
             else
             {

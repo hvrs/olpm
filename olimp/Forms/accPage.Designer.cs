@@ -30,68 +30,75 @@ namespace olimp.Forms
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.наГлавнуюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьПриложениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_mainMenu = new System.Windows.Forms.Button();
+            this.btn_addApp = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(296, 151);
+            this.label1.Location = new System.Drawing.Point(366, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // menuStrip1
+            // panel1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.наГлавнуюToolStripMenuItem,
-            this.добавитьПриложениеToolStripMenuItem,
-            this.выходToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(640, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.panel1.Controls.Add(this.btn_exit);
+            this.panel1.Controls.Add(this.btn_mainMenu);
+            this.panel1.Controls.Add(this.btn_addApp);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(741, 38);
+            this.panel1.TabIndex = 4;
             // 
-            // наГлавнуюToolStripMenuItem
+            // btn_exit
             // 
-            this.наГлавнуюToolStripMenuItem.Name = "наГлавнуюToolStripMenuItem";
-            this.наГлавнуюToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.наГлавнуюToolStripMenuItem.Text = "На главную";
-            this.наГлавнуюToolStripMenuItem.Click += new System.EventHandler(this.наГлавнуюToolStripMenuItem_Click);
+            this.btn_exit.Location = new System.Drawing.Point(197, 0);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(91, 38);
+            this.btn_exit.TabIndex = 7;
+            this.btn_exit.Text = "Выход";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // добавитьПриложениеToolStripMenuItem
+            // btn_mainMenu
             // 
-            this.добавитьПриложениеToolStripMenuItem.Name = "добавитьПриложениеToolStripMenuItem";
-            this.добавитьПриложениеToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
-            this.добавитьПриложениеToolStripMenuItem.Text = "Добавить приложение";
-            this.добавитьПриложениеToolStripMenuItem.Click += new System.EventHandler(this.добавитьПриложениеToolStripMenuItem_Click);
+            this.btn_mainMenu.Location = new System.Drawing.Point(3, 0);
+            this.btn_mainMenu.Name = "btn_mainMenu";
+            this.btn_mainMenu.Size = new System.Drawing.Size(91, 38);
+            this.btn_mainMenu.TabIndex = 6;
+            this.btn_mainMenu.Text = "На главную";
+            this.btn_mainMenu.UseVisualStyleBackColor = true;
+            this.btn_mainMenu.Click += new System.EventHandler(this.btn_mainMenu_Click);
             // 
-            // выходToolStripMenuItem
+            // btn_addApp
             // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.выходToolStripMenuItem.Text = "Выход";
+            this.btn_addApp.Location = new System.Drawing.Point(100, 0);
+            this.btn_addApp.Name = "btn_addApp";
+            this.btn_addApp.Size = new System.Drawing.Size(91, 38);
+            this.btn_addApp.TabIndex = 5;
+            this.btn_addApp.Text = "Добавить приложение";
+            this.btn_addApp.UseVisualStyleBackColor = true;
+            this.btn_addApp.Click += new System.EventHandler(this.btn_addApp_Click);
             // 
             // accPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 329);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(743, 317);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "accPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Аккаунт";
             this.Load += new System.EventHandler(this.accPage_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,9 +107,9 @@ namespace olimp.Forms
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem наГлавнуюToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьПриложениеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_mainMenu;
+        private System.Windows.Forms.Button btn_addApp;
     }
 }

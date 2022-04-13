@@ -22,15 +22,24 @@ namespace olimp.Forms
             label1.Text = email;
         }
 
-        private void добавитьПриложениеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_mainMenu_Click(object sender, EventArgs e)//На главную
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+        }
+
+        private void btn_addApp_Click(object sender, EventArgs e)//Добавить приложение
         {
             addAplication addAplication = new addAplication();
             addAplication.Show();
             this.Close();
         }
 
-        private void наГлавнуюToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_exit_Click(object sender, EventArgs e)
         {
+            MainPage.email = "";
+            MainPage.Sign = false;
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Close();

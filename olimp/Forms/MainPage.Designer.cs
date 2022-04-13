@@ -30,13 +30,13 @@ namespace olimp
         private void InitializeComponent()
         {
             this.lbl_NameApp = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.наГлавнуюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.регистрацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.авторизацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.личныйКабинетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_toAcc = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_mainMenu = new System.Windows.Forms.Button();
+            this.btn_signIN = new System.Windows.Forms.Button();
+            this.btn_signUp = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_NameApp
@@ -48,70 +48,82 @@ namespace olimp
             this.lbl_NameApp.TabIndex = 1;
             this.lbl_NameApp.Text = "Name Application";
             // 
-            // menuStrip1
+            // panel1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.наГлавнуюToolStripMenuItem,
-            this.регистрацияToolStripMenuItem,
-            this.авторизацияToolStripMenuItem,
-            this.выходToolStripMenuItem,
-            this.личныйКабинетToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(741, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
+            this.panel1.Controls.Add(this.btn_toAcc);
+            this.panel1.Controls.Add(this.btn_exit);
+            this.panel1.Controls.Add(this.btn_mainMenu);
+            this.panel1.Controls.Add(this.btn_signIN);
+            this.panel1.Controls.Add(this.btn_signUp);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(741, 38);
+            this.panel1.TabIndex = 3;
             // 
-            // наГлавнуюToolStripMenuItem
+            // btn_toAcc
             // 
-            this.наГлавнуюToolStripMenuItem.Name = "наГлавнуюToolStripMenuItem";
-            this.наГлавнуюToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.наГлавнуюToolStripMenuItem.Text = "На главную";
-            this.наГлавнуюToolStripMenuItem.Click += new System.EventHandler(this.наГлавнуюToolStripMenuItem_Click);
+            this.btn_toAcc.Location = new System.Drawing.Point(638, 0);
+            this.btn_toAcc.Name = "btn_toAcc";
+            this.btn_toAcc.Size = new System.Drawing.Size(91, 38);
+            this.btn_toAcc.TabIndex = 8;
+            this.btn_toAcc.Text = "Личный кабинет";
+            this.btn_toAcc.UseVisualStyleBackColor = true;
+            this.btn_toAcc.Visible = false;
+            this.btn_toAcc.Click += new System.EventHandler(this.btn_toAcc_Click);
             // 
-            // регистрацияToolStripMenuItem
+            // btn_exit
             // 
-            this.регистрацияToolStripMenuItem.Name = "регистрацияToolStripMenuItem";
-            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.регистрацияToolStripMenuItem.Text = "Регистрация";
-            this.регистрацияToolStripMenuItem.Click += new System.EventHandler(this.регистрацияToolStripMenuItem_Click);
+            this.btn_exit.Location = new System.Drawing.Point(541, 0);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(91, 38);
+            this.btn_exit.TabIndex = 7;
+            this.btn_exit.Text = "Выход";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Visible = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // авторизацияToolStripMenuItem
+            // btn_mainMenu
             // 
-            this.авторизацияToolStripMenuItem.Name = "авторизацияToolStripMenuItem";
-            this.авторизацияToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.авторизацияToolStripMenuItem.Text = "Авторизация";
-            this.авторизацияToolStripMenuItem.Click += new System.EventHandler(this.авторизацияToolStripMenuItem_Click);
+            this.btn_mainMenu.Location = new System.Drawing.Point(3, 0);
+            this.btn_mainMenu.Name = "btn_mainMenu";
+            this.btn_mainMenu.Size = new System.Drawing.Size(91, 38);
+            this.btn_mainMenu.TabIndex = 6;
+            this.btn_mainMenu.Text = "На главную";
+            this.btn_mainMenu.UseVisualStyleBackColor = true;
             // 
-            // выходToolStripMenuItem
+            // btn_signIN
             // 
-            this.выходToolStripMenuItem.Margin = new System.Windows.Forms.Padding(300, 0, 0, 0);
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Visible = false;
+            this.btn_signIN.Location = new System.Drawing.Point(197, 0);
+            this.btn_signIN.Name = "btn_signIN";
+            this.btn_signIN.Size = new System.Drawing.Size(91, 38);
+            this.btn_signIN.TabIndex = 5;
+            this.btn_signIN.Text = "Авторизация";
+            this.btn_signIN.UseVisualStyleBackColor = true;
+            this.btn_signIN.Click += new System.EventHandler(this.btn_signIN_Click);
             // 
-            // личныйКабинетToolStripMenuItem
+            // btn_signUp
             // 
-            this.личныйКабинетToolStripMenuItem.Name = "личныйКабинетToolStripMenuItem";
-            this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
-            this.личныйКабинетToolStripMenuItem.Text = "Личный кабинет";
-            this.личныйКабинетToolStripMenuItem.Visible = false;
+            this.btn_signUp.Location = new System.Drawing.Point(100, 0);
+            this.btn_signUp.Name = "btn_signUp";
+            this.btn_signUp.Size = new System.Drawing.Size(91, 38);
+            this.btn_signUp.TabIndex = 4;
+            this.btn_signUp.Text = "Регистрация";
+            this.btn_signUp.UseVisualStyleBackColor = true;
+            this.btn_signUp.Click += new System.EventHandler(this.btn_signUp_Click);
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 399);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_NameApp);
-            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная";
             this.Load += new System.EventHandler(this.MainPage_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,12 +131,12 @@ namespace olimp
 
         #endregion
         private System.Windows.Forms.Label lbl_NameApp;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem наГлавнуюToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem регистрацияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem авторизацияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem личныйКабинетToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_toAcc;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_mainMenu;
+        private System.Windows.Forms.Button btn_signIN;
+        private System.Windows.Forms.Button btn_signUp;
     }
 }
 

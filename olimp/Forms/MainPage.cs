@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using olimp.Forms;
 
 namespace olimp
 {
@@ -18,18 +19,6 @@ namespace olimp
         }
         public static bool Sign = false;
         public static string email = "";
-        private void авторизацияToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SignInPage signInPage = new SignInPage();
-            signInPage.Show();
-        }
-
-        private void регистрацияToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            regPage regPage = new regPage();
-            regPage.Show();
-            this.Hide();
-        }
 
         private void наГлавнуюToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -45,17 +34,44 @@ namespace olimp
             }
             MessageBox.Show(st);
         }
-
         private void MainPage_Load(object sender, EventArgs e)
         {
             if (Sign)
             {
-                регистрацияToolStripMenuItem.Visible = false;
-                авторизацияToolStripMenuItem.Visible = false;
-                выходToolStripMenuItem.Visible = true;
-                личныйКабинетToolStripMenuItem.Visible = true;
+                btn_signUp.Visible = false;
+                btn_signIN.Visible = false;
+                btn_exit.Visible = true;
+                btn_toAcc.Visible = true;
                 lbl_NameApp.Text = "Количество добавленных приложений: {0}" ;
             }
+        }
+        private void btn_signUp_Click(object sender, EventArgs e)//Регистрация
+        {
+            regPage regPage = new regPage();
+            regPage.Show();
+            this.Hide();
+        }
+
+        private void btn_signIN_Click(object sender, EventArgs e)//Авторизация
+        {
+            SignInPage signInPage = new SignInPage();
+            signInPage.Show();
+            this.Hide();
+        }
+
+        private void btn_toAcc_Click(object sender, EventArgs e)
+        {
+            accPage accPage = new accPage();
+            accPage.Show();
+            this.Close();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Sign = false;
+            email = "";
+            this.Visible = false;
+            this.Visible = true;
         }
     }
 }
