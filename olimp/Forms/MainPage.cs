@@ -70,8 +70,10 @@ namespace olimp
         {
             Sign = false;
             email = "";
-            this.Visible = false;
-            this.Visible = true;
+            btn_exit.Visible = false;
+            btn_signIN.Visible = true;
+            btn_signUp.Visible = true;
+            btn_toAcc.Visible = false;
         }
     }
 }

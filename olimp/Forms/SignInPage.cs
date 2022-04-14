@@ -53,9 +53,9 @@ namespace olimp
             {
                 MainPage.email = tb_Email.Text;
                 MainPage.Sign = true;
-
                 accPage accPage = new accPage();
                 accPage.email = tb_Email.Text;
+                addAplication.email = tb_Email.Text;
                 accPage.Show();
                 this.Close();
             }

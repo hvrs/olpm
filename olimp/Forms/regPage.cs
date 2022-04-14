@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
-
+using System.Text.RegularExpressions;
 
 namespace olimp
 {
@@ -54,12 +54,15 @@ namespace olimp
 
            }  
         }
-        static bool IsEmail(string s)
+        static bool IsEmail(string email)
         {
             try
             {
-                var addr = new System.Net.Mail.MailAddress(s);
-                return addr.Address == s;
+            string cond = @"(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)";
+                if (Regex.IsMatch(email, cond))
+                    return true;
+                else
+                    return false;
             }
             catch
             {

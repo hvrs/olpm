@@ -55,16 +55,18 @@ namespace olimp
             this.panel1.Controls.Add(this.btn_mainMenu);
             this.panel1.Controls.Add(this.btn_signIN);
             this.panel1.Controls.Add(this.btn_signUp);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 38);
+            this.panel1.Size = new System.Drawing.Size(741, 37);
             this.panel1.TabIndex = 3;
             // 
             // btn_toAcc
             // 
-            this.btn_toAcc.Location = new System.Drawing.Point(638, 0);
+            this.btn_toAcc.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_toAcc.Location = new System.Drawing.Point(559, 0);
             this.btn_toAcc.Name = "btn_toAcc";
-            this.btn_toAcc.Size = new System.Drawing.Size(91, 38);
+            this.btn_toAcc.Size = new System.Drawing.Size(91, 37);
             this.btn_toAcc.TabIndex = 8;
             this.btn_toAcc.Text = "Личный кабинет";
             this.btn_toAcc.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@ namespace olimp
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(541, 0);
+            this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exit.Location = new System.Drawing.Point(650, 0);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(91, 38);
+            this.btn_exit.Size = new System.Drawing.Size(91, 37);
             this.btn_exit.TabIndex = 7;
             this.btn_exit.Text = "Выход";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -84,18 +87,20 @@ namespace olimp
             // 
             // btn_mainMenu
             // 
-            this.btn_mainMenu.Location = new System.Drawing.Point(3, 0);
+            this.btn_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_mainMenu.Location = new System.Drawing.Point(182, 0);
             this.btn_mainMenu.Name = "btn_mainMenu";
-            this.btn_mainMenu.Size = new System.Drawing.Size(91, 38);
+            this.btn_mainMenu.Size = new System.Drawing.Size(91, 37);
             this.btn_mainMenu.TabIndex = 6;
             this.btn_mainMenu.Text = "На главную";
             this.btn_mainMenu.UseVisualStyleBackColor = true;
             // 
             // btn_signIN
             // 
-            this.btn_signIN.Location = new System.Drawing.Point(197, 0);
+            this.btn_signIN.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_signIN.Location = new System.Drawing.Point(91, 0);
             this.btn_signIN.Name = "btn_signIN";
-            this.btn_signIN.Size = new System.Drawing.Size(91, 38);
+            this.btn_signIN.Size = new System.Drawing.Size(91, 37);
             this.btn_signIN.TabIndex = 5;
             this.btn_signIN.Text = "Авторизация";
             this.btn_signIN.UseVisualStyleBackColor = true;
@@ -103,9 +108,10 @@ namespace olimp
             // 
             // btn_signUp
             // 
-            this.btn_signUp.Location = new System.Drawing.Point(100, 0);
+            this.btn_signUp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_signUp.Location = new System.Drawing.Point(0, 0);
             this.btn_signUp.Name = "btn_signUp";
-            this.btn_signUp.Size = new System.Drawing.Size(91, 38);
+            this.btn_signUp.Size = new System.Drawing.Size(91, 37);
             this.btn_signUp.TabIndex = 4;
             this.btn_signUp.Text = "Регистрация";
             this.btn_signUp.UseVisualStyleBackColor = true;

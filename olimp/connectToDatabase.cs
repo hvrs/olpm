@@ -57,9 +57,14 @@ namespace olimp
             if (npgSqlDataReader.HasRows)
                 foreach (DbDataRecord dbDataRecord in npgSqlDataReader)
                     amountApps++;
-                
-
-            
+        }
+        public void addAplication(string nameApp, string uID, string email)
+        {
+            NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
+            npgsqlConnection.Open();
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"INSERT INTO application(nameApp, uID, data, email) VALUES ('{nameApp}', '{uID}', '{DateTime.Now:g}', '{email}')", npgsqlConnection);
+            npgSqlCommand.ExecuteNonQuery();
+            npgsqlConnection.Close();
         }
     }
 }
