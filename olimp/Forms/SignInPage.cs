@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using olimp.Forms;
+using System.Text.RegularExpressions;
 
 namespace olimp
 {
@@ -30,7 +31,7 @@ namespace olimp
                 lbl_typeErr.Text = "Введите Email";
                 return;
             }
-            else if (IsEmail(tb_Email.Text) == false)
+            else if (!IsEmail(tb_Email.Text))
             {
                 lbl_typeErr.Visible = true;
                 lbl_typeErr.Text = "Неверная почта";
@@ -81,17 +82,13 @@ namespace olimp
             return sb.ToString();
         }
 
-        static bool IsEmail(string s)
+        static bool IsEmail(string email)
         {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(s);
-                return addr.Address == s;
-            }
-            catch
-            {
+            string cond = @"(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)";
+            if (Regex.IsMatch(email, cond))
+                return true;
+            else
                 return false;
-            }
         }
     }
 }
