@@ -34,6 +34,7 @@ namespace olimp.Forms
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_mainMenu = new System.Windows.Forms.Button();
             this.btn_addApp = new System.Windows.Forms.Button();
+            this.btn_statistic = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@ namespace olimp.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel1.Controls.Add(this.btn_statistic);
             this.panel1.Controls.Add(this.btn_exit);
             this.panel1.Controls.Add(this.btn_mainMenu);
             this.panel1.Controls.Add(this.btn_addApp);
@@ -60,8 +62,8 @@ namespace olimp.Forms
             // 
             // btn_exit
             // 
-            this.btn_exit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_exit.Location = new System.Drawing.Point(182, 0);
+            this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exit.Location = new System.Drawing.Point(652, 0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(91, 37);
             this.btn_exit.TabIndex = 7;
@@ -91,6 +93,17 @@ namespace olimp.Forms
             this.btn_addApp.UseVisualStyleBackColor = true;
             this.btn_addApp.Click += new System.EventHandler(this.btn_addApp_Click);
             // 
+            // btn_statistic
+            // 
+            this.btn_statistic.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_statistic.Location = new System.Drawing.Point(182, 0);
+            this.btn_statistic.Name = "btn_statistic";
+            this.btn_statistic.Size = new System.Drawing.Size(91, 37);
+            this.btn_statistic.TabIndex = 8;
+            this.btn_statistic.Text = "Статистика";
+            this.btn_statistic.UseVisualStyleBackColor = true;
+            this.btn_statistic.Click += new System.EventHandler(this.btn_statistic_Click);
+            // 
             // accPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,5 +129,6 @@ namespace olimp.Forms
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_mainMenu;
         private System.Windows.Forms.Button btn_addApp;
+        private System.Windows.Forms.Button btn_statistic;
     }
 }

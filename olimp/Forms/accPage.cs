@@ -44,5 +44,12 @@ namespace olimp.Forms
             mainPage.Show();
             this.Close();
         }
+
+        private void btn_statistic_Click(object sender, EventArgs e)
+        {
+            applicationStatistic applicationStatistic = new applicationStatistic();
+            applicationStatistic.Show();
+            this.Close();
+        }
     }
 }

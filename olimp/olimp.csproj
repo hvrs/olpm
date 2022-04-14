@@ -104,6 +104,12 @@
     <Compile Include="Forms\addAplication.Designer.cs">
       <DependentUpon>addAplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\applicationStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\applicationStatistic.Designer.cs">
+      <DependentUpon>applicationStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\addAplication.resx">
       <DependentUpon>addAplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\applicationStatistic.resx">
+      <DependentUpon>applicationStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
