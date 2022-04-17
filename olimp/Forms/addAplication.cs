@@ -26,6 +26,7 @@ namespace olimp.Forms
         private void btn_mainMenu_Click(object sender, EventArgs e)//На главную
         {
             MainPage mainPage = new MainPage();
+            MainPage.email = email;
             mainPage.Show();
             this.Close();
         }
@@ -33,6 +34,7 @@ namespace olimp.Forms
         private void btn_toAcc_Click(object sender, EventArgs e)
         {
             accPage acc = new accPage();
+            accPage.email = email;
             acc.Show();
             this.Close();
         }

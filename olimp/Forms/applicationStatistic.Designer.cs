@@ -38,7 +38,7 @@ namespace olimp.Forms
             this.GridListApps.AllowUserToAddRows = false;
             this.GridListApps.AllowUserToDeleteRows = false;
             this.GridListApps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridListApps.Location = new System.Drawing.Point(51, 57);
+            this.GridListApps.Location = new System.Drawing.Point(57, 40);
             this.GridListApps.Name = "GridListApps";
             this.GridListApps.ReadOnly = true;
             this.GridListApps.Size = new System.Drawing.Size(458, 232);

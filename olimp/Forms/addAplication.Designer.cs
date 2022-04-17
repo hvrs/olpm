@@ -37,7 +37,7 @@ namespace olimp.Forms
             this.btn_toAcc = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.tb_nameApp = new System.Windows.Forms.TextBox();
-            this.tb_uId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,9 +108,9 @@ namespace olimp.Forms
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(12, 261);
+            this.btn_add.Location = new System.Drawing.Point(12, 246);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(107, 21);
+            this.btn_add.Size = new System.Drawing.Size(113, 35);
             this.btn_add.TabIndex = 8;
             this.btn_add.Text = "Добавить";
             this.btn_add.UseVisualStyleBackColor = true;
@@ -118,24 +118,26 @@ namespace olimp.Forms
             // 
             // tb_nameApp
             // 
-            this.tb_nameApp.Location = new System.Drawing.Point(134, 276);
+            this.tb_nameApp.Location = new System.Drawing.Point(134, 261);
             this.tb_nameApp.Name = "tb_nameApp";
             this.tb_nameApp.Size = new System.Drawing.Size(213, 20);
             this.tb_nameApp.TabIndex = 9;
             // 
-            // tb_uId
+            // label2
             // 
-            this.tb_uId.Location = new System.Drawing.Point(134, 250);
-            this.tb_uId.Name = "tb_uId";
-            this.tb_uId.Size = new System.Drawing.Size(213, 20);
-            this.tb_uId.TabIndex = 10;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(131, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Название приложения";
             // 
             // addAplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 309);
-            this.Controls.Add(this.tb_uId);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_nameApp);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.panel1);
@@ -161,6 +163,6 @@ namespace olimp.Forms
         private System.Windows.Forms.Button btn_toAcc;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TextBox tb_nameApp;
-        private System.Windows.Forms.TextBox tb_uId;
+        private System.Windows.Forms.Label label2;
     }
 }

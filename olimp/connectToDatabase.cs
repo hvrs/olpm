@@ -62,7 +62,7 @@ namespace olimp
         {
             NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
             npgsqlConnection.Open();
-            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"INSERT INTO application(nameApp, uID, data, email) VALUES ('{nameApp}', '{uID}', '{DateTime.Now:g}', '{email}')", npgsqlConnection);
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"INSERT INTO app(nameApp, uid, data, email) VALUES ('{nameApp}', '{uID}', '{DateTime.Now:g}', '{email}')", npgsqlConnection);
             npgSqlCommand.ExecuteNonQuery();
             npgsqlConnection.Close();
         }

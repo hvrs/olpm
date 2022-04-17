@@ -25,6 +25,7 @@ namespace olimp.Forms
         private void btn_mainMenu_Click(object sender, EventArgs e)//На главную
         {
             MainPage mainPage = new MainPage();
+            MainPage.email = email;
             mainPage.Show();
             this.Close();
         }
@@ -32,6 +33,7 @@ namespace olimp.Forms
         private void btn_addApp_Click(object sender, EventArgs e)//Добавить приложение
         {
             addAplication addAplication = new addAplication();
+            addAplication.email = email;
             addAplication.Show();
             this.Close();
         }
@@ -48,6 +50,7 @@ namespace olimp.Forms
         private void btn_statistic_Click(object sender, EventArgs e)
         {
             applicationStatistic applicationStatistic = new applicationStatistic();
+            applicationStatistic.email = email;
             applicationStatistic.Show();
             this.Close();
         }
