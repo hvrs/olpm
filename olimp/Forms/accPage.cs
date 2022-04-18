@@ -26,6 +26,7 @@ namespace olimp.Forms
         {
             MainPage mainPage = new MainPage();
             MainPage.email = email;
+            MainPage.Sign = true;
             mainPage.Show();
             this.Close();
         }

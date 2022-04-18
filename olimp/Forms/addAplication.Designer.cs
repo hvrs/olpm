@@ -29,8 +29,6 @@ namespace olimp.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_ID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_mainMenu = new System.Windows.Forms.Button();
@@ -40,25 +38,6 @@ namespace olimp.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Уникальный идентификатор:";
-            // 
-            // lbl_ID
-            // 
-            this.lbl_ID.AutoSize = true;
-            this.lbl_ID.Location = new System.Drawing.Point(173, 48);
-            this.lbl_ID.Name = "lbl_ID";
-            this.lbl_ID.Size = new System.Drawing.Size(91, 13);
-            this.lbl_ID.TabIndex = 6;
-            this.lbl_ID.Text = "индентификатор";
-            this.lbl_ID.Visible = false;
             // 
             // panel1
             // 
@@ -141,8 +120,6 @@ namespace olimp.Forms
             this.Controls.Add(this.tb_nameApp);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lbl_ID);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "addAplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -155,8 +132,6 @@ namespace olimp.Forms
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_ID;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_mainMenu;

@@ -27,5 +27,33 @@ namespace olimp.Forms
                 GridListApps.Update();
             }
         }
+
+        private void btn_toAcc_Click(object sender, EventArgs e)
+        {
+            accPage.email = email;
+            accPage acPage = new accPage();
+            acPage.Show();
+            this.Close();
+        }
+
+        private void btn_mainMenu_Click(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            MainPage.email = email;
+            MainPage.Sign = true;
+            mainPage.Show();
+            this.Close();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            MainPage.email = "";
+            email = "";
+            accPage.email = "";
+            MainPage.Sign = false;
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+        }
     }
 }

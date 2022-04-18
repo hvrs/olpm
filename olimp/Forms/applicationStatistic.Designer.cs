@@ -30,7 +30,12 @@ namespace olimp.Forms
         private void InitializeComponent()
         {
             this.GridListApps = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_mainMenu = new System.Windows.Forms.Button();
+            this.btn_toAcc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridListApps)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GridListApps
@@ -38,22 +43,70 @@ namespace olimp.Forms
             this.GridListApps.AllowUserToAddRows = false;
             this.GridListApps.AllowUserToDeleteRows = false;
             this.GridListApps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridListApps.Location = new System.Drawing.Point(57, 40);
+            this.GridListApps.Location = new System.Drawing.Point(12, 79);
             this.GridListApps.Name = "GridListApps";
             this.GridListApps.ReadOnly = true;
-            this.GridListApps.Size = new System.Drawing.Size(458, 232);
+            this.GridListApps.Size = new System.Drawing.Size(358, 194);
             this.GridListApps.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.btn_exit);
+            this.panel1.Controls.Add(this.btn_mainMenu);
+            this.panel1.Controls.Add(this.btn_toAcc);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(670, 35);
+            this.panel1.TabIndex = 8;
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_exit.Location = new System.Drawing.Point(182, 0);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(91, 35);
+            this.btn_exit.TabIndex = 7;
+            this.btn_exit.Text = "Выход";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
+            // btn_mainMenu
+            // 
+            this.btn_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_mainMenu.Location = new System.Drawing.Point(91, 0);
+            this.btn_mainMenu.Name = "btn_mainMenu";
+            this.btn_mainMenu.Size = new System.Drawing.Size(91, 35);
+            this.btn_mainMenu.TabIndex = 6;
+            this.btn_mainMenu.Text = "На главную";
+            this.btn_mainMenu.UseVisualStyleBackColor = true;
+            this.btn_mainMenu.Click += new System.EventHandler(this.btn_mainMenu_Click);
+            // 
+            // btn_toAcc
+            // 
+            this.btn_toAcc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_toAcc.Location = new System.Drawing.Point(0, 0);
+            this.btn_toAcc.Name = "btn_toAcc";
+            this.btn_toAcc.Size = new System.Drawing.Size(91, 35);
+            this.btn_toAcc.TabIndex = 5;
+            this.btn_toAcc.Text = "Аккаунт";
+            this.btn_toAcc.UseVisualStyleBackColor = true;
+            this.btn_toAcc.Click += new System.EventHandler(this.btn_toAcc_Click);
             // 
             // applicationStatistic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 323);
+            this.ClientSize = new System.Drawing.Size(670, 323);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.GridListApps);
             this.Name = "applicationStatistic";
             this.Text = "applicationStatistic";
             this.Load += new System.EventHandler(this.applicationStatistic_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridListApps)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -61,5 +114,9 @@ namespace olimp.Forms
         #endregion
 
         private System.Windows.Forms.DataGridView GridListApps;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_mainMenu;
+        private System.Windows.Forms.Button btn_toAcc;
     }
 }

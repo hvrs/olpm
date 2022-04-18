@@ -1,11 +1,12 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace olimp
 {
@@ -65,6 +66,24 @@ namespace olimp
             NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"INSERT INTO app(nameApp, uid, data, email) VALUES ('{nameApp}', '{uID}', '{DateTime.Now:g}', '{email}')", npgsqlConnection);
             npgSqlCommand.ExecuteNonQuery();
             npgsqlConnection.Close();
+        }
+        private DataSet dataSet = new DataSet();
+        private DataTable Dae = new DataTable();
+        public void getListApps(string email, DataGridView dataGridView)
+        {
+            NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
+            npgsqlConnection.Open();
+          //  NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"SELECT 'Уникальный идентификатор' = SUBSTRING(app.uid,1,50), 'Название' = SUBSTRING(app.nameApp,1,50), 'Дата добавления' = SUBSTRING(app.data) FROM app WHERE email = '{email}'", npgsqlConnection);
+            string conn = $"SELECT 'Уникальный идентификатор' = SUBSTRING(app.uid,1,50), 'Название' = SUBSTRING(app.nameApp,1,50), 'Дата добавления' = SUBSTRING(app.data) FROM app WHERE email = '{email}'";
+            /*NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();*/
+            NpgsqlDataAdapter DA = new NpgsqlDataAdapter(conn, connectionString);
+            dataSet.Reset();
+            DA.Fill(dataSet);
+            Dae = dataSet.Tables[0];
+            dataGridView.DataSource = Dae;
+            npgsqlConnection.Close();
+            
+
         }
     }
 }
