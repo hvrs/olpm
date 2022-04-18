@@ -50,8 +50,8 @@ namespace olimp.Forms
 
         private void btn_statistic_Click(object sender, EventArgs e)
         {
-            applicationStatistic applicationStatistic = new applicationStatistic();
-            applicationStatistic.email = email;
+            applicationList applicationStatistic = new applicationList();
+            applicationList.email = email;
             applicationStatistic.Show();
             this.Close();
         }

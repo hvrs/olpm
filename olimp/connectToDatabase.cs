@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using System.Windows.Forms.DataVisualization.Charting;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -21,6 +22,7 @@ namespace olimp
             npgSqlCommand.ExecuteNonQuery();
             npgSqlConnection.Close();
         }
+
         public void signin(string email, out string password, out bool isUser)
         {           
             password = "";
@@ -63,7 +65,7 @@ namespace olimp
         {
             NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
             npgsqlConnection.Open();
-            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"INSERT INTO app(nameApp, uid, data, email) VALUES ('{nameApp}', '{uID}', '{DateTime.Now:g}', '{email}')", npgsqlConnection);
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"INSERT INTO app(nameApp, uid, data, email, view, edit) VALUES ('{nameApp}', '{uID}', '{DateTime.Now:g}', '{email}', '0', '0')", npgsqlConnection);
             npgSqlCommand.ExecuteNonQuery();
             npgsqlConnection.Close();
         }
@@ -82,8 +84,33 @@ namespace olimp
             Dae = dataSet.Tables[0];
             dataGridView.DataSource = Dae;
             npgsqlConnection.Close();
-            
-
+        }
+        public void checkuid(string uid, out bool isUid)
+        {
+            isUid = false;
+            NpgsqlConnection npgSqlConnection = new NpgsqlConnection(connectionString);
+            npgSqlConnection.Open();
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"SELECT uid FROM app WHERE uid = '{uid}';", npgSqlConnection);
+            NpgsqlDataReader npgSqlDataReader = npgSqlCommand.ExecuteReader();
+            if (npgSqlDataReader.HasRows)
+                isUid = true;
+            npgSqlConnection.Close();
+        }
+        public void statApp(string email, Chart chart)
+        {
+            int view = 0,  edit = 0;
+            NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
+            npgsqlConnection.Open();
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"SELECT view, edit FROM app WHERE email = '{email}';", npgsqlConnection);
+            NpgsqlDataReader npgSqlDataReader = npgSqlCommand.ExecuteReader();
+            if (npgSqlDataReader.HasRows)
+                foreach (DbDataRecord dbDataRecord in npgSqlDataReader)
+                {
+                    view = int.Parse(dbDataRecord["view"].ToString());
+                    edit = int.Parse(dbDataRecord["edit"].ToString());
+                }
+            chart.Series[0].Points.AddXY(view);
+            chart.Series[1].Points.AddXY(edit);
         }
     }
 }

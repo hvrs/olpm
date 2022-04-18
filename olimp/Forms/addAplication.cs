@@ -63,8 +63,18 @@ namespace olimp.Forms
                 uID += simb[r];
             }
             connectToDatabase connectToDatabase = new connectToDatabase();
+            connectToDatabase.checkuid(uID, out bool isUid);
+            while (isUid)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    r = random.Next(simb.Length);
+                    uID += simb[r];
+                }
+                connectToDatabase.checkuid(uID, out bool isud);
+                isUid = isud;
+            }
             connectToDatabase.addAplication(tb_nameApp.Text, uID, email);
-
         }
 
     }
