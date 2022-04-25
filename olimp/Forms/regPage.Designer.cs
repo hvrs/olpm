@@ -41,14 +41,14 @@ namespace olimp
             // 
             // tb_Email
             // 
-            this.tb_Email.Location = new System.Drawing.Point(74, 36);
+            this.tb_Email.Location = new System.Drawing.Point(83, 36);
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(159, 20);
             this.tb_Email.TabIndex = 0;
             // 
             // tb_Pasw
             // 
-            this.tb_Pasw.Location = new System.Drawing.Point(74, 85);
+            this.tb_Pasw.Location = new System.Drawing.Point(83, 85);
             this.tb_Pasw.Name = "tb_Pasw";
             this.tb_Pasw.PasswordChar = '*';
             this.tb_Pasw.Size = new System.Drawing.Size(159, 20);
@@ -56,7 +56,7 @@ namespace olimp
             // 
             // tb_PaswRe
             // 
-            this.tb_PaswRe.Location = new System.Drawing.Point(74, 138);
+            this.tb_PaswRe.Location = new System.Drawing.Point(83, 138);
             this.tb_PaswRe.Name = "tb_PaswRe";
             this.tb_PaswRe.PasswordChar = '*';
             this.tb_PaswRe.Size = new System.Drawing.Size(159, 20);
@@ -87,7 +87,7 @@ namespace olimp
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Location = new System.Drawing.Point(21, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace olimp
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(12, 92);
+            this.label2.Location = new System.Drawing.Point(21, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 6;
@@ -107,7 +107,7 @@ namespace olimp
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 145);
+            this.label3.Location = new System.Drawing.Point(21, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 7;

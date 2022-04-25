@@ -17,15 +17,12 @@ namespace olimp.Forms
             InitializeComponent();
         }
         public static string email = "";
+        private DataTable dtabl = new DataTable();
+
         private void applicationStatistic_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = new DataTable();
-            if (GridListApps.Rows.Count !=0)
-            {
-                GridListApps.Visible = true;
-                GridListApps.DataSource = dataTable;
-                GridListApps.Update();
-            }
+            connectToDatabase connectToDatabase = new connectToDatabase();
+            connectToDatabase.getListApps(email, GridListApps, dtabl);
         }
 
         private void btn_toAcc_Click(object sender, EventArgs e)

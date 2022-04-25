@@ -71,18 +71,25 @@ namespace olimp
         }
         private DataSet dataSet = new DataSet();
         private DataTable Dae = new DataTable();
-        public void getListApps(string email, DataGridView dataGridView)
+        public void getListApps(string email, DataGridView dataGridView, DataTable dataTable)
         {
             NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
             npgsqlConnection.Open();
-          //  NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"SELECT 'Уникальный идентификатор' = SUBSTRING(app.uid,1,50), 'Название' = SUBSTRING(app.nameApp,1,50), 'Дата добавления' = SUBSTRING(app.data) FROM app WHERE email = '{email}'", npgsqlConnection);
-            string conn = $"SELECT 'Уникальный идентификатор' = SUBSTRING(app.uid,1,50), 'Название' = SUBSTRING(app.nameApp,1,50), 'Дата добавления' = SUBSTRING(app.data) FROM app WHERE email = '{email}'";
-            /*NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();*/
-            NpgsqlDataAdapter DA = new NpgsqlDataAdapter(conn, connectionString);
-            dataSet.Reset();
-            DA.Fill(dataSet);
-            Dae = dataSet.Tables[0];
-            dataGridView.DataSource = Dae;
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand
+            {
+                Connection = npgsqlConnection,
+                CommandType = CommandType.Text,
+                CommandText = $"SELECT  nameApp, uid, data FROM app WHERE email = '{email}'"
+            };
+            NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
+            if (npgsqlDataReader.HasRows)
+            {
+                dataTable = new DataTable();
+                dataTable.Load(npgsqlDataReader);
+                dataGridView.DataSource = dataTable;
+
+            }
+            npgsqlCommand.Dispose();
             npgsqlConnection.Close();
         }
         public void checkuid(string uid, out bool isUid)
@@ -98,7 +105,7 @@ namespace olimp
         }
         public void statApp(string email, Chart chart)
         {
-            int view = 0,  edit = 0;
+            int view = 1,  edit = 1;
             NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
             npgsqlConnection.Open();
             NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"SELECT view, edit FROM app WHERE email = '{email}';", npgsqlConnection);
@@ -109,8 +116,9 @@ namespace olimp
                     view = int.Parse(dbDataRecord["view"].ToString());
                     edit = int.Parse(dbDataRecord["edit"].ToString());
                 }
-            chart.Series[0].Points.AddXY(view);
-            chart.Series[1].Points.AddXY(edit);
+            chart.Series[0].Points.AddXY("Просмотры",view);
+            chart.Series[0].Points.AddXY("Изменения",edit);
+            npgsqlConnection.Close();
         }
     }
 }

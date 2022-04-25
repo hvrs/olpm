@@ -22,5 +22,32 @@ namespace olimp.Forms
             connectToDatabase connectToDatabase = new connectToDatabase();
             connectToDatabase.statApp(email, chart1);
         }
+
+        private void btn_toAcc_Click(object sender, EventArgs e)
+        {
+            accPage.email = email;
+            accPage acPage = new accPage();
+            acPage.Show();
+            this.Close();
+        }
+
+        private void btn_mainMenu_Click(object sender, EventArgs e)
+        {
+            MainPage.email = email;
+            MainPage.Sign = true;
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            email = "";
+            MainPage.email = "";
+            MainPage.Sign = false;
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+        }
     }
 }

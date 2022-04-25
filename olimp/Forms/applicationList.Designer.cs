@@ -43,7 +43,7 @@ namespace olimp.Forms
             this.GridListApps.AllowUserToAddRows = false;
             this.GridListApps.AllowUserToDeleteRows = false;
             this.GridListApps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridListApps.Location = new System.Drawing.Point(12, 79);
+            this.GridListApps.Location = new System.Drawing.Point(12, 55);
             this.GridListApps.Name = "GridListApps";
             this.GridListApps.ReadOnly = true;
             this.GridListApps.Size = new System.Drawing.Size(358, 194);
@@ -51,7 +51,7 @@ namespace olimp.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.btn_exit);
             this.panel1.Controls.Add(this.btn_mainMenu);
@@ -65,6 +65,8 @@ namespace olimp.Forms
             // btn_exit
             // 
             this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exit.FlatAppearance.BorderSize = 0;
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Location = new System.Drawing.Point(302, 0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(91, 35);
@@ -76,6 +78,8 @@ namespace olimp.Forms
             // btn_mainMenu
             // 
             this.btn_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_mainMenu.FlatAppearance.BorderSize = 0;
+            this.btn_mainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mainMenu.Location = new System.Drawing.Point(91, 0);
             this.btn_mainMenu.Name = "btn_mainMenu";
             this.btn_mainMenu.Size = new System.Drawing.Size(91, 35);
@@ -87,6 +91,8 @@ namespace olimp.Forms
             // btn_toAcc
             // 
             this.btn_toAcc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_toAcc.FlatAppearance.BorderSize = 0;
+            this.btn_toAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_toAcc.Location = new System.Drawing.Point(0, 0);
             this.btn_toAcc.Name = "btn_toAcc";
             this.btn_toAcc.Size = new System.Drawing.Size(91, 35);
@@ -99,7 +105,7 @@ namespace olimp.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 301);
+            this.ClientSize = new System.Drawing.Size(393, 259);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GridListApps);
             this.Name = "applicationList";
