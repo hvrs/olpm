@@ -29,9 +29,9 @@ namespace olimp.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_exit = new System.Windows.Forms.Button();
@@ -43,25 +43,25 @@ namespace olimp.Forms
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(36, 73);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(93, 71);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(401, 219);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chr_stats";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.btn_exit);
             this.panel1.Controls.Add(this.btn_mainMenu);
@@ -77,6 +77,7 @@ namespace olimp.Forms
             this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exit.ForeColor = System.Drawing.Color.White;
             this.btn_exit.Location = new System.Drawing.Point(415, 0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(91, 37);
@@ -90,6 +91,7 @@ namespace olimp.Forms
             this.btn_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_mainMenu.FlatAppearance.BorderSize = 0;
             this.btn_mainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mainMenu.ForeColor = System.Drawing.Color.White;
             this.btn_mainMenu.Location = new System.Drawing.Point(91, 0);
             this.btn_mainMenu.Name = "btn_mainMenu";
             this.btn_mainMenu.Size = new System.Drawing.Size(91, 37);
@@ -103,6 +105,7 @@ namespace olimp.Forms
             this.btn_toAcc.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_toAcc.FlatAppearance.BorderSize = 0;
             this.btn_toAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_toAcc.ForeColor = System.Drawing.Color.White;
             this.btn_toAcc.Location = new System.Drawing.Point(0, 0);
             this.btn_toAcc.Name = "btn_toAcc";
             this.btn_toAcc.Size = new System.Drawing.Size(91, 37);
@@ -115,9 +118,11 @@ namespace olimp.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(506, 326);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chart1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "applicationStats";
             this.Text = "Статистика";
             this.Load += new System.EventHandler(this.applicationStats_Load);

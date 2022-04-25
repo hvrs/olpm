@@ -23,6 +23,7 @@ namespace olimp.Forms
         {
             connectToDatabase connectToDatabase = new connectToDatabase();
             connectToDatabase.getListApps(email, GridListApps, dtabl);
+
         }
 
         private void btn_toAcc_Click(object sender, EventArgs e)

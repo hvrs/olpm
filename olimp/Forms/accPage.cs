@@ -59,7 +59,7 @@ namespace olimp.Forms
         private void btn_diagramm_Click(object sender, EventArgs e)
         {
             applicationStats appstat = new applicationStats();
-            
+            applicationStats.email = email;
             appstat.Show();
             this.Close();
         }

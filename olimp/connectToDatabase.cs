@@ -73,8 +73,10 @@ namespace olimp
         private DataTable Dae = new DataTable();
         public void getListApps(string email, DataGridView dataGridView, DataTable dataTable)
         {
+
             NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
             npgsqlConnection.Open();
+            viewapp(email);
             NpgsqlCommand npgsqlCommand = new NpgsqlCommand
             {
                 Connection = npgsqlConnection,
@@ -118,6 +120,21 @@ namespace olimp
                 }
             chart.Series[0].Points.AddXY("Просмотры",view);
             chart.Series[0].Points.AddXY("Изменения",edit);
+            npgsqlConnection.Close();
+        }
+        public void viewapp (string email)
+        {
+            int view = 0;
+            NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
+            npgsqlConnection.Open();
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand($"SELECT view FROM app WHERE email = '{email}';", npgsqlConnection);
+            NpgsqlDataReader npgSqlDataReader = npgSqlCommand.ExecuteReader();
+            if (npgSqlDataReader.HasRows)
+                foreach (DbDataRecord dbDataRecord in npgSqlDataReader)
+                    view = int.Parse(dbDataRecord["view"].ToString());
+            view++;
+            npgSqlCommand = new NpgsqlCommand($"UPDARE app Set view = {view} where email= '{email}'", npgsqlConnection);
+            npgSqlCommand.ExecuteNonQuery();
             npgsqlConnection.Close();
         }
     }

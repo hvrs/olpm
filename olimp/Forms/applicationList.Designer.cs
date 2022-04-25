@@ -51,7 +51,7 @@ namespace olimp.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.btn_exit);
             this.panel1.Controls.Add(this.btn_mainMenu);
@@ -59,7 +59,7 @@ namespace olimp.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 35);
+            this.panel1.Size = new System.Drawing.Size(381, 35);
             this.panel1.TabIndex = 8;
             // 
             // btn_exit
@@ -67,7 +67,8 @@ namespace olimp.Forms
             this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.Location = new System.Drawing.Point(302, 0);
+            this.btn_exit.ForeColor = System.Drawing.Color.White;
+            this.btn_exit.Location = new System.Drawing.Point(290, 0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(91, 35);
             this.btn_exit.TabIndex = 7;
@@ -80,6 +81,7 @@ namespace olimp.Forms
             this.btn_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_mainMenu.FlatAppearance.BorderSize = 0;
             this.btn_mainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mainMenu.ForeColor = System.Drawing.Color.White;
             this.btn_mainMenu.Location = new System.Drawing.Point(91, 0);
             this.btn_mainMenu.Name = "btn_mainMenu";
             this.btn_mainMenu.Size = new System.Drawing.Size(91, 35);
@@ -93,6 +95,7 @@ namespace olimp.Forms
             this.btn_toAcc.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_toAcc.FlatAppearance.BorderSize = 0;
             this.btn_toAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_toAcc.ForeColor = System.Drawing.Color.White;
             this.btn_toAcc.Location = new System.Drawing.Point(0, 0);
             this.btn_toAcc.Name = "btn_toAcc";
             this.btn_toAcc.Size = new System.Drawing.Size(91, 35);
@@ -105,9 +108,11 @@ namespace olimp.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 259);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(381, 257);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GridListApps);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "applicationList";
             this.Text = "applicationStatistic";
             this.Load += new System.EventHandler(this.applicationStatistic_Load);

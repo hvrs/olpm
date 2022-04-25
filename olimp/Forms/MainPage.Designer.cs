@@ -42,7 +42,7 @@ namespace olimp
             // lbl_NameApp
             // 
             this.lbl_NameApp.AutoSize = true;
-            this.lbl_NameApp.Location = new System.Drawing.Point(331, 187);
+            this.lbl_NameApp.Location = new System.Drawing.Point(261, 160);
             this.lbl_NameApp.Name = "lbl_NameApp";
             this.lbl_NameApp.Size = new System.Drawing.Size(90, 13);
             this.lbl_NameApp.TabIndex = 1;
@@ -50,7 +50,7 @@ namespace olimp
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.btn_toAcc);
             this.panel1.Controls.Add(this.btn_exit);
             this.panel1.Controls.Add(this.btn_mainMenu);
@@ -59,7 +59,7 @@ namespace olimp
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 40);
+            this.panel1.Size = new System.Drawing.Size(663, 40);
             this.panel1.TabIndex = 3;
             // 
             // btn_toAcc
@@ -67,7 +67,8 @@ namespace olimp
             this.btn_toAcc.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_toAcc.FlatAppearance.BorderSize = 0;
             this.btn_toAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_toAcc.Location = new System.Drawing.Point(559, 0);
+            this.btn_toAcc.ForeColor = System.Drawing.Color.White;
+            this.btn_toAcc.Location = new System.Drawing.Point(481, 0);
             this.btn_toAcc.Name = "btn_toAcc";
             this.btn_toAcc.Size = new System.Drawing.Size(91, 40);
             this.btn_toAcc.TabIndex = 8;
@@ -81,7 +82,8 @@ namespace olimp
             this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.Location = new System.Drawing.Point(650, 0);
+            this.btn_exit.ForeColor = System.Drawing.Color.White;
+            this.btn_exit.Location = new System.Drawing.Point(572, 0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(91, 40);
             this.btn_exit.TabIndex = 7;
@@ -95,6 +97,7 @@ namespace olimp
             this.btn_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_mainMenu.FlatAppearance.BorderSize = 0;
             this.btn_mainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mainMenu.ForeColor = System.Drawing.Color.White;
             this.btn_mainMenu.Location = new System.Drawing.Point(182, 0);
             this.btn_mainMenu.Name = "btn_mainMenu";
             this.btn_mainMenu.Size = new System.Drawing.Size(91, 40);
@@ -107,6 +110,7 @@ namespace olimp
             this.btn_signIN.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_signIN.FlatAppearance.BorderSize = 0;
             this.btn_signIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_signIN.ForeColor = System.Drawing.Color.White;
             this.btn_signIN.Location = new System.Drawing.Point(91, 0);
             this.btn_signIN.Name = "btn_signIN";
             this.btn_signIN.Size = new System.Drawing.Size(91, 40);
@@ -120,6 +124,7 @@ namespace olimp
             this.btn_signUp.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_signUp.FlatAppearance.BorderSize = 0;
             this.btn_signUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_signUp.ForeColor = System.Drawing.Color.White;
             this.btn_signUp.Location = new System.Drawing.Point(0, 0);
             this.btn_signUp.Name = "btn_signUp";
             this.btn_signUp.Size = new System.Drawing.Size(91, 40);
@@ -132,7 +137,8 @@ namespace olimp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 307);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(663, 307);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_NameApp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
