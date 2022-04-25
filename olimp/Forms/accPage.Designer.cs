@@ -35,13 +35,14 @@ namespace olimp.Forms
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_mainMenu = new System.Windows.Forms.Button();
             this.btn_addApp = new System.Windows.Forms.Button();
+            this.btn_diagramm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(366, 151);
+            this.label1.Location = new System.Drawing.Point(229, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -49,7 +50,8 @@ namespace olimp.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
+            this.panel1.Controls.Add(this.btn_diagramm);
             this.panel1.Controls.Add(this.btn_statistic);
             this.panel1.Controls.Add(this.btn_exit);
             this.panel1.Controls.Add(this.btn_mainMenu);
@@ -57,7 +59,7 @@ namespace olimp.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 37);
+            this.panel1.Size = new System.Drawing.Size(530, 37);
             this.panel1.TabIndex = 4;
             // 
             // btn_statistic
@@ -65,11 +67,13 @@ namespace olimp.Forms
             this.btn_statistic.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_statistic.FlatAppearance.BorderSize = 0;
             this.btn_statistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_statistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_statistic.ForeColor = System.Drawing.Color.White;
             this.btn_statistic.Location = new System.Drawing.Point(182, 0);
             this.btn_statistic.Name = "btn_statistic";
             this.btn_statistic.Size = new System.Drawing.Size(91, 37);
             this.btn_statistic.TabIndex = 8;
-            this.btn_statistic.Text = "Статистика";
+            this.btn_statistic.Text = "Список приложений";
             this.btn_statistic.UseVisualStyleBackColor = true;
             this.btn_statistic.Click += new System.EventHandler(this.btn_statistic_Click);
             // 
@@ -78,7 +82,8 @@ namespace olimp.Forms
             this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.Location = new System.Drawing.Point(652, 0);
+            this.btn_exit.ForeColor = System.Drawing.Color.White;
+            this.btn_exit.Location = new System.Drawing.Point(439, 0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(91, 37);
             this.btn_exit.TabIndex = 7;
@@ -91,6 +96,7 @@ namespace olimp.Forms
             this.btn_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_mainMenu.FlatAppearance.BorderSize = 0;
             this.btn_mainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mainMenu.ForeColor = System.Drawing.Color.White;
             this.btn_mainMenu.Location = new System.Drawing.Point(91, 0);
             this.btn_mainMenu.Name = "btn_mainMenu";
             this.btn_mainMenu.Size = new System.Drawing.Size(91, 37);
@@ -104,6 +110,7 @@ namespace olimp.Forms
             this.btn_addApp.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_addApp.FlatAppearance.BorderSize = 0;
             this.btn_addApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addApp.ForeColor = System.Drawing.Color.White;
             this.btn_addApp.Location = new System.Drawing.Point(0, 0);
             this.btn_addApp.Name = "btn_addApp";
             this.btn_addApp.Size = new System.Drawing.Size(91, 37);
@@ -112,11 +119,27 @@ namespace olimp.Forms
             this.btn_addApp.UseVisualStyleBackColor = true;
             this.btn_addApp.Click += new System.EventHandler(this.btn_addApp_Click);
             // 
+            // btn_diagramm
+            // 
+            this.btn_diagramm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_diagramm.FlatAppearance.BorderSize = 0;
+            this.btn_diagramm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_diagramm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_diagramm.ForeColor = System.Drawing.Color.White;
+            this.btn_diagramm.Location = new System.Drawing.Point(273, 0);
+            this.btn_diagramm.Name = "btn_diagramm";
+            this.btn_diagramm.Size = new System.Drawing.Size(91, 37);
+            this.btn_diagramm.TabIndex = 9;
+            this.btn_diagramm.Text = "Статистика";
+            this.btn_diagramm.UseVisualStyleBackColor = true;
+            this.btn_diagramm.Click += new System.EventHandler(this.btn_diagramm_Click);
+            // 
             // accPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 317);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(530, 317);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -138,5 +161,6 @@ namespace olimp.Forms
         private System.Windows.Forms.Button btn_mainMenu;
         private System.Windows.Forms.Button btn_addApp;
         private System.Windows.Forms.Button btn_statistic;
+        private System.Windows.Forms.Button btn_diagramm;
     }
 }

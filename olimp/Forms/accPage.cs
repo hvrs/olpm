@@ -22,7 +22,7 @@ namespace olimp.Forms
             label1.Text = email;
         }
 
-        private void btn_mainMenu_Click(object sender, EventArgs e)//На главную
+        private void btn_mainMenu_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
             MainPage.email = email;
@@ -31,7 +31,7 @@ namespace olimp.Forms
             this.Close();
         }
 
-        private void btn_addApp_Click(object sender, EventArgs e)//Добавить приложение
+        private void btn_addApp_Click(object sender, EventArgs e)
         {
             addAplication addAplication = new addAplication();
             addAplication.email = email;
@@ -53,6 +53,14 @@ namespace olimp.Forms
             applicationList applicationStatistic = new applicationList();
             applicationList.email = email;
             applicationStatistic.Show();
+            this.Close();
+        }
+
+        private void btn_diagramm_Click(object sender, EventArgs e)
+        {
+            applicationStats appstat = new applicationStats();
+            
+            appstat.Show();
             this.Close();
         }
     }
