@@ -31,10 +31,12 @@ namespace olimp
         {
             this.tb_Pasw = new System.Windows.Forms.TextBox();
             this.tb_Email = new System.Windows.Forms.TextBox();
-            this.btn_SignIn = new System.Windows.Forms.Button();
             this.lbl_typeErr = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_SignIn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_Pasw
@@ -52,21 +54,11 @@ namespace olimp
             this.tb_Email.Size = new System.Drawing.Size(159, 20);
             this.tb_Email.TabIndex = 2;
             // 
-            // btn_SignIn
-            // 
-            this.btn_SignIn.Location = new System.Drawing.Point(57, 168);
-            this.btn_SignIn.Name = "btn_SignIn";
-            this.btn_SignIn.Size = new System.Drawing.Size(81, 28);
-            this.btn_SignIn.TabIndex = 4;
-            this.btn_SignIn.Text = "Войти";
-            this.btn_SignIn.UseVisualStyleBackColor = true;
-            this.btn_SignIn.Click += new System.EventHandler(this.btn_SignIn_Click);
-            // 
             // lbl_typeErr
             // 
             this.lbl_typeErr.AutoSize = true;
             this.lbl_typeErr.ForeColor = System.Drawing.Color.Red;
-            this.lbl_typeErr.Location = new System.Drawing.Point(54, 128);
+            this.lbl_typeErr.Location = new System.Drawing.Point(33, 118);
             this.lbl_typeErr.Name = "lbl_typeErr";
             this.lbl_typeErr.Size = new System.Drawing.Size(35, 13);
             this.lbl_typeErr.TabIndex = 5;
@@ -93,22 +85,47 @@ namespace olimp
             this.label1.TabIndex = 7;
             this.label1.Text = "Email:";
             // 
+            // btn_SignIn
+            // 
+            this.btn_SignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
+            this.btn_SignIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SignIn.FlatAppearance.BorderSize = 0;
+            this.btn_SignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SignIn.ForeColor = System.Drawing.Color.White;
+            this.btn_SignIn.Location = new System.Drawing.Point(0, 0);
+            this.btn_SignIn.Name = "btn_SignIn";
+            this.btn_SignIn.Size = new System.Drawing.Size(205, 39);
+            this.btn_SignIn.TabIndex = 4;
+            this.btn_SignIn.Text = "Войти";
+            this.btn_SignIn.UseVisualStyleBackColor = false;
+            this.btn_SignIn.Click += new System.EventHandler(this.btn_SignIn_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_SignIn);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 147);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(205, 39);
+            this.panel1.TabIndex = 9;
+            // 
             // SignInPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(205, 208);
+            this.ClientSize = new System.Drawing.Size(205, 186);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_typeErr);
-            this.Controls.Add(this.btn_SignIn);
             this.Controls.Add(this.tb_Pasw);
             this.Controls.Add(this.tb_Email);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SignInPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,9 +135,10 @@ namespace olimp
 
         private System.Windows.Forms.TextBox tb_Pasw;
         private System.Windows.Forms.TextBox tb_Email;
-        private System.Windows.Forms.Button btn_SignIn;
         private System.Windows.Forms.Label lbl_typeErr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_SignIn;
+        private System.Windows.Forms.Panel panel1;
     }
 }
