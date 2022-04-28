@@ -60,6 +60,7 @@ namespace olimp
             if (npgSqlDataReader.HasRows)
                 foreach (DbDataRecord dbDataRecord in npgSqlDataReader)
                     amountApps++;
+            npgsqlConnection.Close();
         }
         public void addAplication(string nameApp, string uID, string email)
         {

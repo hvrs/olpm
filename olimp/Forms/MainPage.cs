@@ -42,7 +42,9 @@ namespace olimp
                 btn_signIN.Visible = false;
                 btn_exit.Visible = true;
                 btn_toAcc.Visible = true;
-                lbl_NameApp.Text = "Количество добавленных приложений: {0}" ;
+                connectToDatabase connectToDatabase = new connectToDatabase();
+                connectToDatabase.amountUserApps(email, out int amountApps);
+                lbl_NameApp.Text = $"Количество добавленных приложений: {amountApps}" ;
             }
         }
         private void btn_signUp_Click(object sender, EventArgs e)//Регистрация
